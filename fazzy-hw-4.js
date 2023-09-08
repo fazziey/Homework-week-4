@@ -5,8 +5,8 @@ for (let i = 0; i < 100; i++){
     nilaiRandom.push(randomNilai)
 }
 
-let arrayGanjil = [] //index Ganjil
-let arrayGenap = [] // index Genap
+const arrayGanjil = [] //index Ganjil
+const arrayGenap = [] // index Genap
 
 for (let i = 0; i < nilaiRandom.length; i++){
     if (i % 2 === 0) {
@@ -25,7 +25,6 @@ function nilaiMin(angka){
     }
 }
 return min
-// console.log(min);
 }
 
 // fungsi max
@@ -37,7 +36,6 @@ function nilaiMax(angka){
     }
 }
 return max
-// console.log(max);
 }
 
 // fungsi total
@@ -47,19 +45,13 @@ function nilaiTotal(angka){
         total += angka[i]
     }
     return total
-    // console.log(total);
 }
 
 // fungsi rata-rata
 function nilaiAverage(angka){
-    let total = 0
-    for(let i = 0; i < angka.length; i++){
-        total += angka[i]
-    }
     let average = 0
-    average = total / angka.length
+    average = nilaiTotal(angka) / angka.length
     return average
-    // console.log(average);
 }
 
 
@@ -84,7 +76,7 @@ function nilaiAverage(angka){
     "rata-rata lebih besar array Ganjil" : "rata-rata memiliki nilai sama antara array ganjil dan genap"
     // console.log(perAvg);
 
-
+console.log("ini array dengan indeks 100 nilai random (1-50)");
 console.log(nilaiRandom)
 console.log("ini indeks Genap")
 console.log(arrayGenap)
